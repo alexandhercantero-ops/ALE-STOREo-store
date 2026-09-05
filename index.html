@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Perseo Store | Diamantes Free Fire</title>
+<meta name="description" content="Perseo Store - tienda online de diamantes Free Fire.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><span class="logo">P</span><div><b>PERSEO STORE</b><small>DIAMANTES 24/7</small></div></div>
+  <a href="#productos" class="navbtn">Comprar</a>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <span class="pill">⚡ ENTREGA RÁPIDA</span>
+    <h1>Diamantes para<br><strong>Free Fire</strong></h1>
+    <p>Elegí tu paquete, ingresá tu UID y realizá tu pedido de forma sencilla.</p>
+    <a class="cta" href="#productos">Ver diamantes ↓</a>
+  </div>
+  <div class="hero-card">
+    <div class="diamond">💎</div>
+    <h3>PERSEO STORE</h3>
+    <p>Tu tienda digital</p>
+  </div>
+</section>
+
+<section id="productos">
+  <h2>Paquetes de diamantes</h2>
+  <div class="grid">
+    <button class="product" data-pack="100 Diamantes"><span>💎</span><b>100 💎</b><small>Seleccionar</small></button>
+    <button class="product" data-pack="310 Diamantes"><span>💎</span><b>310 💎</b><small>Seleccionar</small></button>
+    <button class="product" data-pack="520 Diamantes"><span>💎</span><b>520 💎</b><small>Seleccionar</small></button>
+    <button class="product" data-pack="1060 Diamantes"><span>💎</span><b>1060 💎</b><small>Seleccionar</small></button>
+  </div>
+  <p class="notice">Los precios se dejan configurables hasta conectar tu proveedor y tu medio de pago.</p>
+</section>
+
+<section class="order">
+  <div>
+    <h2>Hacé tu pedido</h2>
+    <p>Completá los datos. Esta demo no procesa pagos todavía.</p>
+  </div>
+  <form id="orderForm">
+    <label>Paquete
+      <input id="pack" name="pack" placeholder="Elegí un paquete" readonly required>
+    </label>
+    <label>UID de Free Fire
+      <input name="uid" inputmode="numeric" placeholder="Ej.: 123456789" required>
+    </label>
+    <label>WhatsApp
+      <input name="phone" inputmode="tel" placeholder="Ej.: +595..." required>
+    </label>
+    <button class="cta" type="submit">Generar pedido</button>
+  </form>
+  <div id="result" class="result" hidden></div>
+</section>
+</main>
+
+<footer>
+  <b>PERSEO STORE</b> · Tienda digital independiente · 2026
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
