@@ -1,79 +1,36 @@
 <!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Recargas Gaming — Diamantes, Pavos y Robux</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header class="topbar">
-  <div class="brand"><span class="brand-dot"></span> RECARGAS<span>GAMING</span></div>
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#tienda">Tienda</a>
-    <a href="#como">Cómo funciona</a>
-    <button class="admin-link" onclick="openAdmin()">Panel admin</button>
-  </nav>
-</header>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DISCIPLINA TOTAL</title><link rel="stylesheet" href="styles.css"></head>
+<body><aside><div class="logo">⚔<span>DISCIPLINA<br><b>TOTAL</b></span></div>
+<p class="motto">La disciplina vence al talento cuando el talento no se disciplina.</p>
+<nav>
+<button data-v="dashboard" class="on">⚔ Cuartel General</button><button data-v="habitos">✓ Hábitos</button>
+<button data-v="salud">♥ Alimentación & Agua</button><button data-v="entreno">⚡ Entrenamiento</button>
+<button data-v="estudio">▣ Estudio</button><button data-v="finanzas">₲ Finanzas</button>
+<button data-v="sueno">☾ Sueño</button><button data-v="productividad">◒ Productividad</button>
+</nav><div class="side"><button id="export">⬇ Copia de seguridad</button><button id="reset">↺ Reiniciar</button></div></aside>
+<main><header><div><small>CENTRO DE MANDO · <span id="date"></span></small><h1 id="title">CUARTEL GENERAL</h1></div><div class="streak">RACHA<br><b id="streak">0</b> días</div></header>
 
-<main>
-<section id="inicio" class="hero">
-  <div class="hero-copy">
-    <div class="pill">⚡ RECARGAS AUTOMÁTICAS</div>
-    <h1>Tu gaming.<br><span>Sin esperar.</span></h1>
-    <p>Compra diamantes, Pavos y Robux de forma rápida y segura. Elige tu producto, paga y recibe tu recarga.</p>
-    <div class="hero-actions">
-      <a class="btn primary" href="#tienda">Comprar ahora</a>
-      <a class="btn ghost" href="#como">¿Cómo funciona?</a>
-    </div>
-    <div class="trust">
-      <span>✓ Entrega automática</span>
-      <span>✓ Atención al cliente</span>
-      <span>✓ Precios competitivos</span>
-    </div>
-  </div>
-  <div class="hero-card">
-    <div class="floating">RECARGA INSTANTÁNEA</div>
-    <div class="game-orb">🎮</div>
-    <h3>Todo en un solo lugar</h3>
-    <p>Free Fire · Fortnite · Roblox</p>
-  </div>
-</section>
+<section id="dashboard" class="view show"><div class="hero"><div><label>MISIÓN DEL DÍA</label><h2 id="quote">Disciplina primero. Motivación después.</h2><p id="verse"></p></div><strong>⚔</strong></div>
+<div class="cards four"><article><small>DISCIPLINA</small><b id="score">0%</b><i id="scorebar"></i></article><article><small>HIDRATACIÓN</small><b><span id="w1">0</span>/<span id="wg">8</span></b><i id="wbar"></i></article><article><small>ENTRENAMIENTO</small><b id="workdash">0 min</b></article><article><small>ESTUDIO</small><b id="studash">0 min</b></article></div>
+<div class="cards two"><article><h3>CHECKLIST DE BATALLA</h3><div id="dashhab"></div></article><article class="verse"><b>✝</b><div><h3>PALABRA DEL DÍA</h3><p id="vtext"></p><small id="vref"></small></div></article></div>
+<div class="cards three"><article><small>INGRESOS</small><b id="incd">₲0</b></article><article><small>GASTOS</small><b id="expd">₲0</b></article><article><small>AHORRO</small><b id="savd">₲0</b></article></div></section>
 
-<section id="tienda" class="section">
-  <div class="section-head">
-    <div><div class="eyebrow">TIENDA</div><h2>Elige tu juego</h2></div>
-    <div class="search">⌕ <input id="search" placeholder="Buscar producto..." oninput="renderProducts()"></div>
-  </div>
-  <div id="products" class="product-grid"></div>
-</section>
+<section id="habitos" class="view"><h2>Hábitos diarios</h2><p class="sub">Pequeñas victorias. Todos los días.</p><div class="box"><input id="habitIn" placeholder="Ej. Leer 20 minutos"><button id="addHabit">+ Agregar</button></div><div class="box" id="habitList"></div></section>
 
-<section id="como" class="section how">
-  <div class="eyebrow">SIMPLE Y RÁPIDO</div><h2>¿Cómo funciona?</h2>
-  <div class="steps">
-    <div><b>01</b><h3>Elige</h3><p>Selecciona el juego y el paquete que quieres.</p></div>
-    <div><b>02</b><h3>Completa tus datos</h3><p>Introduce tu ID o los datos que solicite el producto.</p></div>
-    <div><b>03</b><h3>Paga</h3><p>Completa el pago desde el checkout.</p></div>
-    <div><b>04</b><h3>Recibe</h3><p>El sistema procesa el pedido automáticamente.</p></div>
-  </div>
-</section>
+<section id="salud" class="view"><h2>Alimentación & hidratación</h2><p class="sub">Cuida el cuerpo para cumplir la misión.</p>
+<div class="cards two"><article class="water"><h3>HIDRATACIÓN</h3><b id="waterBig">0</b><span>/ <input id="goal" type="number" value="8"> vasos</span><div id="drops"></div><button id="wm">−</button><button id="wp">+</button></article>
+<article><h3>COMIDAS DE HOY</h3><div class="meals"><button data-meal="Desayuno">☀️ Desayuno</button><button data-meal="Almuerzo">🍽️ Almuerzo</button><button data-meal="Merienda">☕ Merienda</button><button data-meal="Cena">🌙 Cena</button></div></article></div>
+<div class="box"><select id="meal"><option>Desayuno</option><option>Almuerzo</option><option>Merienda</option><option>Cena</option></select><input id="food" placeholder="Qué comiste"><input id="cal" type="number" placeholder="kcal (opcional)"><button id="addFood">Registrar</button></div><div class="box" id="foodList"></div></section>
 
-<section class="cta">
-  <div><h2>¿Listo para recargar?</h2><p>Compra en pocos pasos y consulta el estado de tu pedido.</p></div>
-  <a class="btn primary" href="#tienda">Ir a la tienda</a>
-</section>
-</main>
+<section id="entreno" class="view"><h2>Entrenamiento</h2><p class="sub">Entrena aunque no tengas ganas.</p><div class="box"><input id="wn" placeholder="Ej. Carrera / Pecho"><input id="wmn" type="number" placeholder="Minutos"><input id="wcal" type="number" placeholder="Calorías"><button id="addWorkout">Registrar</button></div><div class="cards three"><article><small>MINUTOS HOY</small><b id="wt">0</b></article><article><small>SESIONES</small><b id="wc">0</b></article><article><small>CALORÍAS</small><b id="wct">0</b></article></div><div class="box" id="workList"></div></section>
 
-<footer>© 2026 RecargasGaming · Todos los derechos reservados</footer>
+<section id="estudio" class="view"><h2>Estudio</h2><p class="sub">La mente también se entrena.</p><div class="box"><input id="subject" placeholder="Materia / habilidad"><input id="smin" type="number" placeholder="Minutos"><input id="topic" placeholder="Tema"><button id="addStudy">Registrar</button></div><div class="box"><b id="stotal">0</b> minutos estudiados hoy<div id="studyList"></div></div></section>
 
-<div id="modal" class="modal hidden">
-  <div class="modal-box">
-    <button class="close" onclick="closeModal()">×</button>
-    <div id="modalContent"></div>
-  </div>
-</div>
+<section id="finanzas" class="view"><h2>Finanzas & patrimonio</h2><p class="sub">Que cada guaraní tenga una misión.</p><div class="cards three"><article><small>INGRESOS</small><b id="inc">₲0</b></article><article><small>GASTOS</small><b id="exp">₲0</b></article><article><small>BALANCE</small><b id="bal">₲0</b></article></div>
+<div class="box"><select id="mtype"><option value="income">Ingreso</option><option value="expense">Gasto</option><option value="saving">Ahorro</option><option value="investment">Inversión</option></select><input id="amount" type="number" placeholder="Monto ₲"><input id="mdesc" placeholder="Descripción"><button id="addMoney">Registrar</button></div><div class="box" id="moneyList"></div></section>
 
-<script src="app.js"></script>
-</body>
-</html>
+<section id="sueno" class="view"><h2>Sueño & recuperación</h2><p class="sub">Descansar también es parte de la disciplina.</p><div class="box"><input id="bed" type="time"><input id="wake" type="time"><input id="quality" type="number" min="1" max="10" placeholder="Calidad 1-10"><button id="addSleep">Registrar noche</button></div><div class="cards two"><article class="center"><small>ÚLTIMO REGISTRO</small><b id="sleepBig">0h 0m</b><span id="sleepQ">Sin registro</span></article><article class="verse"><b>☾</b><div><h3>RECUPERACIÓN</h3><p>“En paz me acostaré, y asimismo dormiré.”</p><small>Salmos 4:8</small></div></article></div><div class="box" id="sleepList"></div></section>
+
+<section id="productividad" class="view"><h2>Productividad</h2><p class="sub">Define la misión. Ejecuta. Revisa.</p><div class="box"><input id="task" placeholder="Ej. Terminar curso"><button id="addTask">+ Agregar misión</button></div><div class="box" id="taskList"></div><div class="hero"><div><label>ORDEN DE OPERACIONES</label><h2 id="mquote">Tu misión de hoy no necesita permiso.</h2><p>Constancia, orden y ejecución.</p></div><strong>⚔</strong></div></section>
+</main><script src="app.js"></script></body></html>
