@@ -1,21 +1,26 @@
-# ALE STORE 
+# RecargasGaming — diseño inicial
 
-Web inicial para una tienda de diamantes de Free Fire.
+Este proyecto es un prototipo frontend de una tienda de recargas.
 
-## Estado
-Esta versión es una demo funcional del frontend:
-- catálogo
-- selección de paquete
-- formulario de UID y WhatsApp
-- generación de un número de pedido local
+Incluye:
+- Inicio / landing page
+- Tienda con Free Fire, Fortnite y Roblox
+- Búsqueda de productos
+- Checkout visual
+- Creación de pedido de demostración
+- Panel administrativo visual
+- Diseño responsive para móvil y PC
 
-## Para convertirla en una tienda 24/7
-1. Publicar estos archivos en un hosting.
-2. Registrar un dominio si se desea.
-3. Elegir una pasarela de pago disponible en Paraguay.
-4. Conseguir un proveedor/distribuidor autorizado de recargas con API.
-5. Crear backend + base de datos.
-6. Conectar webhook de pago -> creación de pedido -> API de recarga -> confirmación.
-7. Añadir panel de administración y logs/reintentos.
+## Importante
+Los precios incluidos son SOLO datos de demostración. Antes de vender hay que sustituirlos por los costos reales de tu proveedor y configurar los precios/márgenes.
 
-No se incluyen credenciales, cobros ni integración de proveedores hasta elegir esos servicios.
+También falta conectar:
+1. Proveedor/API de recargas (por ejemplo, FazerCards si tu cuenta ofrece API).
+2. Pasarela de pago.
+3. Base de datos.
+4. Autenticación segura del administrador.
+5. Webhooks para confirmar pagos y estados de recarga.
+6. Sistema real de pedidos, saldo y ganancias.
+
+## Probar
+Abre `index.html` en el navegador.
